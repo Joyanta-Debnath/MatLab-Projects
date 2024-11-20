@@ -1,0 +1,15 @@
+Electrical Circuit Analysis: RLC Circuit Response
+
+% RLC parameters
+R = 10; L = 0.5; C = 0.01;
+
+% Transfer function of RLC circuit
+numerator = [1];
+denominator = [L*C, R*C, 1];
+sys = tf(numerator, denominator);
+
+% Step response
+step(sys);
+title('Step Response of RLC Circuit');
+xlabel('Time (s)');
+ylabel('Amplitude');
