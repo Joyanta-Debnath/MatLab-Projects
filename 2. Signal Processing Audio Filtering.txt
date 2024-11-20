@@ -1,0 +1,26 @@
+Signal Processing: Audio Filtering
+
+% Load a sample audio file
+[audio, fs] = audioread('example_audio.wav'); % Replace with your file
+t = (0:length(audio)-1)/fs;
+
+% Design a low-pass filter
+fc = 1000; % Cut-off frequency (Hz)
+[b, a] = butter(6, fc/(fs/2), 'low'); % 6th order low-pass filter
+
+% Apply the filter
+filtered_audio = filter(b, a, audio);
+
+% Plot and compare original and filtered signals
+subplot(2,1,1);
+plot(t, audio);
+title('Original Audio Signal');
+xlabel('Time (s)'); ylabel('Amplitude');
+
+subplot(2,1,2);
+plot(t, filtered_audio);
+title('Filtered Audio Signal');
+xlabel('Time (s)'); ylabel('Amplitude');
+
+% Save the filtered audio
+audiowrite('filtered_audio.wav', filtered_audio, fs);
