@@ -1,4 +1,4 @@
-Image Processing: Edge Detection
+##Image Processing: Edge Detection
 
 % Load a grayscale image
 image = imread('example_image.jpg'); % Replace with your file
