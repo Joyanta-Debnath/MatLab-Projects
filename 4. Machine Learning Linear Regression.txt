@@ -1,0 +1,21 @@
+Machine Learning: Linear Regression
+
+% Generate synthetic data
+x = linspace(0, 10, 100)';
+y = 3*x + randn(100,1)*2; % Linear trend with noise
+
+% Fit linear regression model
+coeffs = polyfit(x, y, 1); % Linear fit
+
+% Predicted values
+y_pred = polyval(coeffs, x);
+
+% Plot original data and fitted line
+scatter(x, y, 'b');
+hold on;
+plot(x, y_pred, 'r', 'LineWidth', 2);
+title('Linear Regression Fit');
+xlabel('X');
+ylabel('Y');
+legend('Data', 'Fitted Line');
+grid on;
