@@ -1,4 +1,4 @@
-Signal Processing: Audio Filtering
+##Signal Processing: Audio Filtering
 
 % Load a sample audio file
 [audio, fs] = audioread('example_audio.wav'); % Replace with your file
