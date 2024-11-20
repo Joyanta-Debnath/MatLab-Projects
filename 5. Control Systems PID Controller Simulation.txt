@@ -1,0 +1,17 @@
+Control Systems: PID Controller Simulation
+
+% Define system parameters
+numerator = [1];
+denominator = [1 3 2]; % Second-order system: s^2 + 3s + 2
+sys = tf(numerator, denominator);
+
+% PID Controller
+Kp = 2; Ki = 1; Kd = 0.5;
+pid_controller = pid(Kp, Ki, Kd);
+
+% Closed-loop system
+closed_loop_sys = feedback(pid_controller*sys, 1);
+
+% Simulate step response
+step(closed_loop_sys);
+title('PID Controller Step Response');
