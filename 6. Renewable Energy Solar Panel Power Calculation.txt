@@ -1,0 +1,16 @@
+Renewable Energy: Solar Panel Power Calculation
+
+% Define parameters
+irradiance = linspace(200, 1000, 100); % Sunlight intensity (W/m^2)
+panel_area = 1.6; % Solar panel area in m^2
+efficiency = 0.2; % Solar panel efficiency (20%)
+
+% Calculate power output
+power_output = irradiance * panel_area * efficiency;
+
+% Plot results
+plot(irradiance, power_output, 'LineWidth', 2);
+title('Solar Panel Power Output');
+xlabel('Irradiance (W/m^2)');
+ylabel('Power Output (W)');
+grid on;
