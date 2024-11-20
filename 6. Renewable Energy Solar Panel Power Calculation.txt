@@ -1,4 +1,4 @@
-Renewable Energy: Solar Panel Power Calculation
+##Renewable Energy: Solar Panel Power Calculation
 
 % Define parameters
 irradiance = linspace(200, 1000, 100); % Sunlight intensity (W/m^2)
