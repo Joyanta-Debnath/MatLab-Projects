@@ -1,4 +1,4 @@
-Electrical Circuit Analysis: RLC Circuit Response
+##Electrical Circuit Analysis: RLC Circuit Response
 
 % RLC parameters
 R = 10; L = 0.5; C = 0.01;
