@@ -1,0 +1,17 @@
+Image Processing: Edge Detection
+
+% Load a grayscale image
+image = imread('example_image.jpg'); % Replace with your file
+gray_image = rgb2gray(image); % Convert to grayscale if not already
+
+% Apply Sobel edge detection
+edges = edge(gray_image, 'Sobel');
+
+% Display original and edge-detected images
+subplot(1,2,1);
+imshow(gray_image);
+title('Original Image');
+
+subplot(1,2,2);
+imshow(edges);
+title('Edge-Detected Image');
