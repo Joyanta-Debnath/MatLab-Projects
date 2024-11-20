@@ -1,4 +1,4 @@
-Machine Learning: Linear Regression
+##Machine Learning: Linear Regression
 
 % Generate synthetic data
 x = linspace(0, 10, 100)';
